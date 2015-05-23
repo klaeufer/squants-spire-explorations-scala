@@ -1,3 +1,7 @@
+import spire.implicits._
+import spire.math._
+import scala.util.Try
+
 {
   val r1 = Rational(2, 4)
   assert(1 == r1.numerator)
@@ -11,7 +15,6 @@
   assert(1 == r3.numerator)
   assert(2 == r3.denominator)
 
-  import scala.util.Try
   val r4 = Try(Rational(1, 0))
   assert(r4.isFailure)
 }
